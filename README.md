@@ -14,7 +14,7 @@ Develop yourself a Notes App for yourself to keep in mind your New Year resoluti
 
 ---
 
-## 3. Acceptance Criteria
+## 2. Acceptance Criteria
 
 This applications should allow you to enter your goals and objectives with the fields: 
 * Dropdown Selectable Topics: Personal, Professional, Relationships, Family, Health and Learning
@@ -24,7 +24,7 @@ This applications should allow you to enter your goals and objectives with the f
 
 ---
 
-## 4. Technical Requeriments /
+## 3. Technical Requeriments /
 - Follow up all the Software Development Lyfecycle steps and document it
 - Only JavaScript Vanilla is allowed
 - Use all the things you know already and that you have learned from the Bootcamp to solve the application code.
@@ -44,7 +44,7 @@ This applications should allow you to enter your goals and objectives with the f
 - It's time to show up the best you can do!
 
 ---
-##  6. Expected Learning Outcomes
+##  4. Expected Learning Outcomes
 
 ---
 
