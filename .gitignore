@@ -3,4 +3,4 @@
 package-lock.json
 .vscode/
 .eslintrc.json
-./node_modules/which
+node_modules
