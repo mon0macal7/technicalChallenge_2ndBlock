@@ -3,5 +3,5 @@
 package-lock.json
 .vscode/
 .eslintrc.json
-*node_modules/*
-node_modules/
+/node_modules
+
