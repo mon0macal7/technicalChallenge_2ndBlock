@@ -1,1 +1,1 @@
-//fetch e iteracion local
+
