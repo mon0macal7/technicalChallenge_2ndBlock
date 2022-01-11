@@ -1,10 +1,10 @@
 {
-  "name": "technicalChallenge_2ndBlock",
+  "name": "NoteApp",
   "version": "1.0.0",
   "description": "--- Index",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mon0macal7/technicalChallenge_2ndBlock#readme",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^8.6.0"
+    "eslint": "^8.6.0",
+    "jest": "^27.4.7"
   }
 }
