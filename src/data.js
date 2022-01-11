@@ -1,0 +1,1 @@
+//fetch e iteracion local
