@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Quattrocento+Sans&display=swap");
-
+/**/
 body {
   font-size: 1.1rem;
   font-weight: 300;
@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+/*Instrucciones*/
 h2 {
   font-family: "Cabin Sketch", cursive;
   font-size: 20px;
@@ -17,37 +18,41 @@ h2 {
   text-shadow: thistle;
   justify-content: center;
 }
+/*GIF*/
 .monkey {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0em;
 }
+/*boton*/
 .btn {
   font-weight: 400;
   padding: 1rem 2rem;
   border-radius: 5rem;
-  min-width: 10rem;
-  color: #446cc2;
+  min-width: 5rem;
+  border-radius: 5rem;
+  color: #1d49a8be;
 }
+
 .btn:hover {
-  box-shadow: 10px 10px 0px #242b83ce;
+  box-shadow: 10px 10px 0px #29398a;
   top: -5px;
   left: -5px;
 }
-
+/*seccion*/
 .contenedorA {
   padding: 0 auto;
   row-gap: 10px;
 }
-
+/*titulo*/
 .label {
   font-size: 20px;
   font-family: "Quattrocento Sans", sans-serif;
   font-weight: 200;
   color: whitesmoke;
 }
-
+/*título y descripción*/
 .meta {
   border: 1px;
   color: rgba(43, 64, 184, 0.788);
@@ -55,7 +60,7 @@ h2 {
   padding: 0.5rem 1rem;
   margin-bottom: 10px;
 }
-
+/*seccion categoria*/
 .contenedorB {
   padding: 5px;
   display: flex;
@@ -64,6 +69,7 @@ h2 {
   margin-bottom: 5em;
   border-radius: 7px;
 }
+/*formulario*/
 .box {
   display: flex;
   width: 700px;
@@ -83,6 +89,7 @@ h2 {
   border-radius: 20px 40px;
   box-shadow: 0 1px 1px 0 rgba(11, 40, 167, 0.377);
 }
+/*Ajustando tamaño de formulario*/
 .new {
   padding: 30px;
   position: relative;
@@ -94,6 +101,7 @@ h2 {
 .time {
   grid-column: 1;
 }
+/*tarjeta dinámica*/
 .card {
   font-family: "Quattrocento Sans", sans-serif;
 
@@ -128,6 +136,10 @@ h2 {
     #636fa4,
     #e8cbc0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.card-img-top {
+  width: 5rem;
+  height: 10rem;
 }
 @media (max-width: 1200px) {
   .box {

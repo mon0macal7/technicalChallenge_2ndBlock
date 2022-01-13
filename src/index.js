@@ -1,16 +1,17 @@
-import { guardarMeta, enlistar } from "./firebase.js";
+import { guardarMeta, enlistar, nuevaMeta } from "./firebase.js";
 
 const formulario = document.getElementById("task-form");
 const ficha = document.getElementById("task-container");
 
 window.addEventListener("DOMContentLoaded", async () => {
-  const querySnapshot = await enlistar();
+  nuevaMeta((querySnapshot) => {
+    //const querySnapshot = await enlistar();
 
-  let imprimir = "";
-  querySnapshot.forEach((doc) => {
-    const nuevo = doc.data();
-    imprimir += `<div class="card">
-  <img src="..." class="card-img-top" alt="...">
+    let imprimir = "";
+    querySnapshot.forEach((doc) => {
+      const nuevo = doc.data();
+      imprimir += `<div class="card">
+  <img src="/assets/phrase3.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${nuevo.title}</h5>
     <p class="card-text">${nuevo.descripcion}</p>
@@ -19,11 +20,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li class="list-group-item">${nuevo.categoria}</li>
     <li class="list-group-item">${nuevo.fecha}</li>
   </ul>
-</div>`;
+   </div>`;
+    });
     //console.log(doc.data());
     //console.log(ficha);
+    ficha.innerHTML = imprimir;
   });
-  ficha.innerHTML = imprimir;
 });
 
 formulario.addEventListener("submit", (e) => {

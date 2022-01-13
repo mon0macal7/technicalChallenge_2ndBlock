@@ -4,6 +4,7 @@ import {
   getDocs,
   collection,
   addDoc,
+  onSnapshot,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,3 +27,6 @@ export const guardarMeta = (title, descripcion, categoria, fecha) => {
   addDoc(collection(db, "metas"), { title, descripcion, categoria, fecha });
 };
 export const enlistar = () => getDocs(collection(db, "metas"));
+
+export const nuevaMeta = (acceder) =>
+  onSnapshot(collection(db, "metas"), acceder);
