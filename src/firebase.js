@@ -5,6 +5,8 @@ import {
   collection,
   addDoc,
   onSnapshot,
+  deleteDoc,
+  doc,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -30,3 +32,5 @@ export const enlistar = () => getDocs(collection(db, "metas"));
 
 export const nuevaMeta = (acceder) =>
   onSnapshot(collection(db, "metas"), acceder);
+
+export const borrarMeta = (id) => deleteDoc(doc(db, "metas", id));

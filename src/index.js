@@ -1,4 +1,4 @@
-import { guardarMeta, enlistar, nuevaMeta } from "./firebase.js";
+import { guardarMeta, enlistar, nuevaMeta, borrarMeta } from "./firebase.js";
 
 const formulario = document.getElementById("task-form");
 const ficha = document.getElementById("task-container");
@@ -20,11 +20,24 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li class="list-group-item">${nuevo.categoria}</li>
     <li class="list-group-item">${nuevo.fecha}</li>
   </ul>
-   </div>`;
+  <button style= color:#445cd3; class="btn-borrar" data-id="${doc.id}>
+  <i class="fas fa-trash-alt"></i></button>
+   </div>
+   
+   `;
     });
     //console.log(doc.data());
     //console.log(ficha);
     ficha.innerHTML = imprimir;
+
+    const eliminar = ficha.querySelectorAll(".btn-borrar");
+    //console.log(eliminar);
+
+    eliminar.forEach((boton) => {
+      boton.addEventListener("click", ({ target: { dataset } }) => {
+        borrarMeta(dataset.id);
+      });
+    });
   });
 });
 
