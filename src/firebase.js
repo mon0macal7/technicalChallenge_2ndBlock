@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"; // Import the functions you need from the SDKs you need
 import {
   getFirestore,
+  getDocs,
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
@@ -24,3 +25,4 @@ const db = getFirestore();
 export const guardarMeta = (title, descripcion, categoria, fecha) => {
   addDoc(collection(db, "metas"), { title, descripcion, categoria, fecha });
 };
+export const enlistar = () => getDocs(collection(db, "metas"));

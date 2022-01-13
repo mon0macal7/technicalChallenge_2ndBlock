@@ -1,9 +1,30 @@
-import { guardarMeta } from "./firebase.js";
+import { guardarMeta, enlistar } from "./firebase.js";
 
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("firefire");
-});
 const formulario = document.getElementById("task-form");
+const ficha = document.getElementById("task-container");
+
+window.addEventListener("DOMContentLoaded", async () => {
+  const querySnapshot = await enlistar();
+
+  let imprimir = "";
+  querySnapshot.forEach((doc) => {
+    const nuevo = doc.data();
+    imprimir += `<div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${nuevo.title}</h5>
+    <p class="card-text">${nuevo.descripcion}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${nuevo.categoria}</li>
+    <li class="list-group-item">${nuevo.fecha}</li>
+  </ul>
+</div>`;
+    //console.log(doc.data());
+    //console.log(ficha);
+  });
+  ficha.innerHTML = imprimir;
+});
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,3 +37,5 @@ formulario.addEventListener("submit", (e) => {
 
   guardarMeta(title.value, descripcion.value, categoria.value, fecha.value);
 });
+
+formulario.reset();
