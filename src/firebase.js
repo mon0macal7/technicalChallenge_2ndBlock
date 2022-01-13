@@ -12,6 +12,7 @@ import {
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+//Conexion con firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCoCNWEndG8yCd5Ze7N-ZBbXcyiJzkf3O0",
   authDomain: "purposesapp-45107.firebaseapp.com",
@@ -24,6 +25,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
+
+//Se exportan las funciones para acceder a la collecion en cloud firestore
 
 export const guardarMeta = (title, descripcion, categoria, fecha) => {
   addDoc(collection(db, "metas"), { title, descripcion, categoria, fecha });
