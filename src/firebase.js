@@ -1,8 +1,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"; // Import the functions you need from the SDKs you need
 import {
   getFirestore,
+  getDocs,
   collection,
   addDoc,
+  onSnapshot,
+  deleteDoc,
+  doc,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,3 +28,9 @@ const db = getFirestore();
 export const guardarMeta = (title, descripcion, categoria, fecha) => {
   addDoc(collection(db, "metas"), { title, descripcion, categoria, fecha });
 };
+export const enlistar = () => getDocs(collection(db, "metas"));
+
+export const nuevaMeta = (acceder) =>
+  onSnapshot(collection(db, "metas"), acceder);
+
+export const borrarMeta = (id) => deleteDoc(doc(db, "metas", id));
