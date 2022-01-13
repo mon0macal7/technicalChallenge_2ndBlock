@@ -1,12 +1,11 @@
 import { guardarMeta, enlistar, nuevaMeta, borrarMeta } from "./firebase.js";
-
+// Conexion con el DOM
 const formulario = document.getElementById("task-form");
 const ficha = document.getElementById("task-container");
-
+// Se crea funcion para cargar pagina
 window.addEventListener("DOMContentLoaded", async () => {
   nuevaMeta((querySnapshot) => {
-    //const querySnapshot = await enlistar();
-
+    //Imprimir cards de manera dinamica trayendo datos de firestore
     let imprimir = "";
     querySnapshot.forEach((doc) => {
       const nuevo = doc.data();
@@ -40,7 +39,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     });
   });
 });
-
+//Funcion para subir datos a cloud firesore
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("sumbitted");
