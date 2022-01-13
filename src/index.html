@@ -28,25 +28,29 @@
     />
   </head>
   <body>
+    <!--  
       <div class="monkey">
           <iframe src="https://giphy.com/embed/AS6Ttgel4yUjqFKlGh" width="120" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
       </div>
+      -->
       <h2>MoNote App</h2>
+      
     <section class="contenedorA">
        
        <div class="contenedorB">
            <div class="box"> 
-         <div class="new">
+            <div  class="new">
         <h4 class="label">Add a new purpose</h4>
-        <input type="text" class="meta" id="1" placeholder="Title">
-        <textarea class="meta" placeholder="description"></textarea>
+        <form id="task-form">
+        <input type="text" class="meta" id="task-title" placeholder="Title">
+        <textarea id="task-description" class="meta" placeholder="Description"></textarea>
        </div>
      <div class="time">
         <label class="label">Add a cathegory</label>
             <select class="meta" id="section">
             <option id="tema" class="opcion">Personal</option>
             <option id="tema" class="opcion">Professional</option>
-            <option id="tema" class="opcion">Relationships</option>t>
+            <option id="tema" class="opcion">Relationships</option>
             <option id="tema" class="opcion">Family</option>
             <option id="tema" class="opcion">Health</option>
             <option id="tema" class="opcion">Learning</option>  
@@ -54,33 +58,30 @@
            <!-- Fecha para los propósitos -->
         <label class="label">Select a month to aproach</label>
          <select class="meta" id="month">
-           <option value="date">January</option>
-           <option value="date">February</option>
-           <option value="date">March</option>
-           <option value="date">April</option>
-           <option value="date">May</option>
-           <option value="date">June</option>
-           <option value="date">July</option>
-           <option value="date">August</option>
-           <option value="date">September</option>
-           <option value="date">October</option>
-           <option value="date">November</option>
-           <option value="date">December</option>
+           <option>January</option>
+           <option>February</option>
+           <option>March</option>
+           <option>April</option>
+           <option>May</option>
+           <option>June</option>
+           <option>July</option>
+           <option>August</option>
+           <option>September</option>
+           <option>October</option>
+           <option>December</option>
+           <option>November</option>
            <br>
            <input class="meta" type="month">
            <br>
          </select>
-        <button id="create" class="btn btn-primary width-100">Add</button>
-          </form> 
-         </div>
+        <button id="btn-task-save" class="btn btn-primary width-100">Add</button>
+        </form>   
+      </div>
         </div>
        </div>
       </section>
-       
-    
-    <!-- Liga firebase/firestore -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="main.js" type="module"></script>
+      <div id="task-container"></div>
+       <script src="./index.js" type="module"></script>
+
   </body>
 </html>

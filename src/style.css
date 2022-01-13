@@ -80,7 +80,7 @@ h2 {
     #363795bd,
     #005d9788
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  border-radius: 20px 40px;
   box-shadow: 0 1px 1px 0 rgba(11, 40, 167, 0.377);
 }
 .new {
