@@ -1,66 +1,82 @@
 # Technical Challenge
+
 ---
+
 Index
 
     1. Description
     2. Aceptance Criteria
     3. Technical Requirements
     4. Expected Learning Outcomes
----
-
-## 1. Description
-
-Develop yourself a Notes App for yourself to keep in mind your New Year resolutions and goals. The target user is yourself.
 
 ---
 
-## 2. Acceptance Criteria
+## 1. Descripción
 
-This applications should allow you to enter your goals and objectives with the fields: 
-* Dropdown Selectable Topics: Personal, Professional, Relationships, Family, Health and Learning
-* Title: Input to add a short Title
-* Description: Text Area to add the desciption of the goal
-* Dropdown with the objective month of achievement. 
+MoNote es una app que permite al usuario ingresar sus metas o planes mediante un formulario, estas metas se imprimen en tarjetas que puede ver y recordar facilmente.
+Cuenta con 5 categorias: Salud, Familia, Aprendizaje,Personal,Familiar y Relaciones.
 
 ---
 
-## 3. Technical Requeriments /
-- Follow up all the Software Development Lyfecycle steps and document it
-- Only JavaScript Vanilla is allowed
-- Use all the things you know already and that you have learned from the Bootcamp to solve the application code.
-- Use Firestore from Firebase to keep your data 
-- Only Arrow Functions are allowed (ECS6)
-- Using modular modular architecture is a plus
-- Add a personal login for you is a plus
-- Finishing before the time is a plus
+## 2. Criterios de Aceptación
 
-**CLUES:**
+Esta aplicación debería permitirle ingresar sus metas y objetivos con los campos:
 
-- All the knowledge from the last 7 projects
-- Try your best to show the expertise and skills you have earned, tecnical and softskills to reach by your own the entrance to the next stage.
-- This project will be deliviered in a personal demo with the review of the performance during this last stage of the Bootcamp. 
-- The results of this stage will give you a learning position to math teams into the final stages.
-- Make every time desition wiseley 
-- It's time to show up the best you can do!
-
----
-##  4. Expected Learning Outcomes
+- Temas desplegables seleccionables: personal, profesional, relaciones, familia, salud y aprendizaje
+- Título: entrada para agregar un título corto
+- Descripción: Área de texto para agregar la descripción de la meta
+- Desplegable con el mes objetivo de consecución.
 
 ---
 
-- [ ] window object 
+## 3. Requerimientos técnicos
+
+Resultados de traducción
+Siga todos los pasos de Lyfecycle de desarrollo de software y documéntelo
+
+- Solo se permite JavaScript Vanilla
+- Usa todas las cosas que ya sabes y que has aprendido del Bootcamp para resolver el código de la aplicación.
+- Use Firestore de Firebase para conservar sus datos
+- Solo se permiten funciones de flecha (ECS6)
+- Usar arquitectura modular modular es una ventaja
+- Agregar un inicio de sesión personal para usted es una ventaja
+- Terminar antes de tiempo es un plus
+- ***
+
+## 4. Aprendizaje esperado
+
+---
+
+- [ ] window object
 - [ ] Arrow Functions and parameters
 - [ ] Short, readable and reusable code
-- [ ] Objects & Arrays 
+- [ ] Objects & Arrays
 - [ ] JSON
 - [ ] Iterators
-- [ ] Firebase: Firestore DB 
+- [ ] Firebase: Firestore DB
 - [ ] Bootstrap 5
 - [ ] Continuous Integration Tools: Git & GitHub
 
 ---
-# ReadMe
+
+## Proceso de flujo de trabajo
+
+Se utiliza el método agile para distribuir las tareas del proyecto
+
+![SCRUM1](.assets/../assets/KanbanApp.png)
+![SCRUM](.assets/../assets/KanbanApp2.png)
 
 ---
 
-> This Readme should be replaced with the project documentation following the SDLC procedures for Agile Software Development Lyfe Cycle.
+## 3. UI(user interface)
+
+### Maquetación
+
+![interfaz](.assets/../assets/Maquetacion.png)
+![interfaz](.assets/../assets/Maqu2.png)
+
+---
+
+## Diagrama de flujo
+
+![Diagrama de flujo](.assets/../assets/Notes%20App.png)
