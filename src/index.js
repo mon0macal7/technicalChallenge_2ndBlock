@@ -7,7 +7,9 @@ window.addEventListener("DOMContentLoaded", async () => {
   nuevaMeta((querySnapshot) => {
     //Imprimir cards de manera dinamica trayendo datos de firestore
     let imprimir = "";
+
     querySnapshot.forEach((doc) => {
+      //variable para guardar el objeto creado en firestore
       const nuevo = doc.data();
       imprimir += `<div class="card">
   <img src="/assets/phrase3.png" class="card-img-top" alt="...">
@@ -19,11 +21,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li class="list-group-item">${nuevo.categoria}</li>
     <li class="list-group-item">${nuevo.fecha}</li>
   </ul>
-  <button style= color:#445cd3; class="btn-borrar" data-id="${doc.id}>
-  <i class="fas fa-trash-alt"></i></button>
-   </div>
-   
-   `;
+  <button type="button" class="btn-borrar" class="btn btn-outline-info" data-id="${doc.id}">Delete</button>
+  </div>
+  `;
     });
     //console.log(doc.data());
     //console.log(ficha);
@@ -32,13 +32,15 @@ window.addEventListener("DOMContentLoaded", async () => {
     const eliminar = ficha.querySelectorAll(".btn-borrar");
     //console.log(eliminar);
 
-    eliminar.forEach((boton) => {
-      boton.addEventListener("click", ({ target: { dataset } }) => {
+    eliminar.forEach((btn) => {
+      btn.addEventListener("click", ({ target: { dataset } }) => {
+        //console.log;
         borrarMeta(dataset.id);
       });
     });
   });
 });
+
 //Funcion para subir datos a cloud firesore
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -50,6 +52,6 @@ formulario.addEventListener("submit", (e) => {
   console.log(title.value, descripcion.value, categoria.value, fecha.value);
 
   guardarMeta(title.value, descripcion.value, categoria.value, fecha.value);
-});
 
-formulario.reset();
+  formulario.reset();
+});
