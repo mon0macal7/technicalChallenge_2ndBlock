@@ -21,9 +21,9 @@ window.addEventListener("DOMContentLoaded", async () => {
     <li class="list-group-item">${nuevo.categoria}</li>
     <li class="list-group-item">${nuevo.fecha}</li>
   </ul>
+  <button type="button" class="btn-borrar" class="btn btn-outline-info" data-id="${doc.id}">Delete</button>
   </div>
-   <div> <button class="btn-borrar" data-id="${doc.id}>Delete</button></div>
-   `;
+  `;
     });
     //console.log(doc.data());
     //console.log(ficha);

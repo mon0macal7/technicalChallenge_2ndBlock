@@ -49,11 +49,11 @@ span {
   border-radius: 5rem;
   color: #1d49a8be;
 }
-.btn-borrar {
+/*.btn-borrar {
   background-color: #29398a;
   size: 2px;
 }
-
+*/
 .btn:hover {
   box-shadow: 10px 10px 0px #445cd3;
   top: -5px;
