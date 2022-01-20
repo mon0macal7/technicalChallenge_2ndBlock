@@ -30,11 +30,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     ficha.innerHTML = imprimir;
 
     const eliminar = ficha.querySelectorAll(".btn-borrar");
-    console.log(eliminar);
+    //console.log(eliminar);
 
     eliminar.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        console.log("borrando");
+      btn.addEventListener("click", ({ target: { dataset } }) => {
+        //console.log;
+        borrarMeta(dataset.id);
       });
     });
   });
