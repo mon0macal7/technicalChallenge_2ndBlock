@@ -209,7 +209,7 @@ span {
   color: #29398a;
   width: 15rem;
   float: left;
-  margin: 2px;
+  margin: 3px;
   background: #e8cbc0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -244,6 +244,6 @@ span {
 }
 @media (max-width: 1200px) {
   .box {
-    min-height: 50vh;
+    min-height: 30vh;
   }
 }
