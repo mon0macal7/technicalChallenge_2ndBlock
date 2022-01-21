@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       const nuevo = doc.data();
 
       imprimir += `<div class="card">
-  <img src="/assets/phrase3.png" class="card-img-top" alt="...">
+  <img src="/assets/phrase2.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${nuevo.title}</h5>
     <p class="card-text">${nuevo.descripcion}</p>
