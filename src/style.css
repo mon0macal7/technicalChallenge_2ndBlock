@@ -5,7 +5,17 @@ body {
   font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 0.05rem;
-  background-image: url("https://images.pexels.com/photos/2873669/pexels-photo-2873669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #5f2c82; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #49a09d,
+    #5f2c82
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #49a09d,
+    #5f2c82
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -16,11 +26,11 @@ span {
   justify-content: center;
   text-align: center;
   color: aliceblue;
-  font-size: 25px;
+  font-size: 28px;
   white-space: nowrap;
-  border-right: 4px solid;
+  border-right: 5px solid;
   width: 21ch;
-  animation: typing 2s steps(21), blink 0.5s infinite step-end alternate;
+  animation: typing 3s steps(21), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 @keyframes typing {
