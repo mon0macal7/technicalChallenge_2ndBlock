@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"; // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"; // Inicializando firebase
 import {
   getFirestore,
   getDocs,
@@ -7,7 +7,9 @@ import {
   onSnapshot,
   deleteDoc,
   doc,
-} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
+  getDoc,
+  updateDoc,
+} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js"; // Conexión con firestore,se importan metodos para editar app con firestore
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,7 +28,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-//Se exportan las funciones para acceder a la collecion en cloud firestore
+//Se exportan las funciones para acceder a la colección en cloud firestore
 
 export const guardarMeta = (title, descripcion, categoria, fecha) => {
   addDoc(collection(db, "metas"), { title, descripcion, categoria, fecha });
@@ -37,3 +39,8 @@ export const nuevaMeta = (acceder) =>
   onSnapshot(collection(db, "metas"), acceder);
 
 export const borrarMeta = (id) => deleteDoc(doc(db, "metas", id));
+
+export const proposito = (id) => getDoc(doc(db, "metas", id));
+
+export const actualizar = (id, edicion) =>
+  updateDoc(doc(db, "metas", id), edicion);
