@@ -49,11 +49,93 @@ span {
   border-radius: 5rem;
   color: #1d49a8be;
 }
-/*.btn-borrar {
-  background-color: #29398a;
-  size: 2px;
+.btn-borrar {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
+  border-radius: 15px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: grid;
+  font-family: Quicksand, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  margin: 1;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
 }
-*/
+
+.btn-borrar:hover {
+  background-image: linear-gradient(#b384c9, #391f5b 50%);
+}
+
+@media (min-width: 768px) {
+  .button-borrar {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+}
+.btn-editar {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
+  border-radius: 15px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,
+    rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  margin: 1;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,
+    rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px,
+    rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.btn-editar:hover {
+  background-image: linear-gradient(#b384c9, #391f5b 50%);
+}
+
+@media (min-width: 768px) {
+  .button-editar {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+}
+
 .btn:hover {
   box-shadow: 10px 10px 0px #445cd3;
   top: -5px;
@@ -127,7 +209,7 @@ span {
   color: #29398a;
   width: 15rem;
   float: left;
-  margin: 2px;
+  margin: 3px;
   background: #e8cbc0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -162,6 +244,6 @@ span {
 }
 @media (max-width: 1200px) {
   .box {
-    min-height: 50vh;
+    min-height: 30vh;
   }
 }
