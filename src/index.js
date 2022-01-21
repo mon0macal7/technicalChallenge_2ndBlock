@@ -91,7 +91,7 @@ formulario.addEventListener("submit", (e) => {
   } else {
     actualizar(id, {
       title: title.value,
-      description: descripcion.value,
+      descripcion: descripcion.value,
     });
 
     modificar = false;
